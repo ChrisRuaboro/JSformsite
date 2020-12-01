@@ -1,5 +1,5 @@
 // Get everything from form at once and instantiate it.
-document.getElementById("myform").addEventListener("submit", function (event) {
+document.getElementById("myForm").addEventListener("submit", function (event) {
     event.preventDefault();
     console.log("Data is gucci");
     let inputDestinationName = event.target.destinationname.value;
@@ -11,12 +11,18 @@ document.getElementById("myform").addEventListener("submit", function (event) {
 });
 
 function buildCard(name, loc, img, desc) {
+    const defaultPic = "https://www.stockphotosecrets.com/wp-content/uploads/2018/08/hide-the-pain-stockphoto-840x560.jpg";
     // building conatiner for card
     let card = document.createElement("div");
     card.classList = "travelCard";
     // we want the image to show first so create image element
     let buildImg = document.createElement("img");
+    if (img === null) {
     buildImg.src = img;
+    }
+    else {
+    building.src = defaultPic;
+    }
     buildImg.alt = loc;
     card.appendChild(buildImg);
     // Display name
@@ -35,12 +41,20 @@ function buildCard(name, loc, img, desc) {
     let editBtn = document.createElement("button")
     editBtn.type(button);
     //TODO: create edit function
-    editBtn.onclick = editFunction();
+    editBtn.onclick = editCard();
     card.appendChild(editBtn);
     let removeBtn = document.createElement("button")
     removeBtn.type(button);
     //TODO: create remove function
-    removeBtn.onclick = removeFunction();
+    removeBtn.onclick = removeCard();
     card.appendChild(removeBtn);
     document.getElementById("destinations").appendChild(card);
+}
+
+function editCard() {
+    
+}
+
+function removeCard(){
+
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Vacation Destinations Wishlist</h1>
+        <p>Found exciting places to visition on your next vacation? Use the form below to add them to your wishlist</p>
+    </div>
+    <div class="travelcontent">
+        <div class="container">
+            <h1>Where to go?</h1>
+            <form id="myForm" action="">
+                <div class="input_block">
+                    <label for="destinationname">Destination Name</label>
+                <input type="text" placeholder="Enter the destination's name" required name="destinationname" id="destinationname">
+            </div> 
+            <div class="input_block">
+                <label for="location">Location</label>
+                <input type="text" placeholder="Where is it located?" required name="location" id="location">
+            </div>
+            <div class="input_block">
+                <label for="travelImage">Travel Image</label>
+                <input type="text" placeholder="Enter me a URL picture!" name="travelImage" id="travelImage">
+            </div>
+            <div class="input_block">
+                <label for="description">Description</label>
+                <input type="text" placeholder="Give a brief description of your destination" name="description" id="description">
+            </div>
+            <div class="input_block">
+                <button type="submit" name="submit" id="submit">Submit</button>
+            </div>
+            </form>
+    
+        </div>
+        <div class="container">
+            <div><h1>My Travel Wishlist!</h1></div>
+            <div id="destinations"></div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

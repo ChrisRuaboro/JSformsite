@@ -17,11 +17,13 @@ function buildCard(name, loc, img, desc) {
     card.classList = "travelCard";
     // we want the image to show first so create image element
     let buildImg = document.createElement("img");
+    buildImg.style.width = '20px';
+    buildImg.style.height = '30px';
     if (img === null) {
     buildImg.src = img;
     }
     else {
-    building.src = defaultPic;
+    buildImg.src = defaultPic;
     }
     buildImg.alt = loc;
     card.appendChild(buildImg);
@@ -40,11 +42,13 @@ function buildCard(name, loc, img, desc) {
 
     let editBtn = document.createElement("button")
     editBtn.type(button);
+    editBtn.innerHTML = "EDIT";
     //TODO: create edit function
     editBtn.onclick = editCard();
     card.appendChild(editBtn);
     let removeBtn = document.createElement("button")
     removeBtn.type(button);
+    removeBtn.innerHTML = "REMOVE";
     //TODO: create remove function
     removeBtn.onclick = removeCard();
     card.appendChild(removeBtn);
@@ -52,7 +56,7 @@ function buildCard(name, loc, img, desc) {
 }
 
 function editCard() {
-    
+
 }
 
 function removeCard(){
